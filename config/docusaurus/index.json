@@ -2,12 +2,6 @@
   "label": "Settings",
   "navbar": [
     {
-      "label": "Hilfe",
-      "link": "page",
-      "pageLink": "src/pages/help.mdx",
-      "position": "left"
-    },
-    {
       "label": "Docs",
       "link": "doc",
       "docLink": "docs/intro.mdx",
@@ -16,6 +10,12 @@
     {
       "label": "Changelog",
       "link": "blog",
+      "position": "left"
+    },
+    {
+      "label": "Hilfe",
+      "link": "page",
+      "pageLink": "src/pages/help.mdx",
       "position": "left"
     }
   ],
@@ -33,11 +33,6 @@
           {
             "label": "Los geht's",
             "to": "docs/intro.mdx",
-            "_template": "internal"
-          },
-          {
-            "label": "Hilfe",
-            "to": "src/pages/help.mdx",
             "_template": "internal"
           }
         ]

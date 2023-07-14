@@ -6,7 +6,7 @@
       "_template": "doc"
     },
     {
-      "title": "Tutorial - Basics",
+      "title": "Grundlagen",
       "link": "generated",
       "items": [
         {
@@ -74,8 +74,8 @@
       "_template": "category"
     },
     {
-      "title": "Tina.io",
-      "href": "https://tina.io/",
+      "title": "Zu Mioto",
+      "href": "https://mioto.app",
       "_template": "link"
     }
   ]

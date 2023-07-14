@@ -13,19 +13,19 @@
     {
       "items": [
         {
-          "title": "Easy to Use",
-          "description": "Docusaurus was designed from the ground up to be easily installed and         used to get your website up and running quickly.\n",
-          "image": "/img/undraw_docusaurus_mountain.svg"
+          "title": "Einfach erklärt",
+          "description": "Du kommst nicht weiter? Dann bist du hier an der richtigen Stelle.\n",
+          "image": "/img/mioto2.png"
         },
         {
-          "title": "Focus on What Matters",
-          "description": "Docusaurus lets you focus on your docs, and we'll do the chores. Go ahead and move your docs into the docs directory.\n",
-          "image": "/img/undraw_docusaurus_tree.svg"
+          "title": "Lirum Larum",
+          "description": "Hier steht noch nichts von Wert.\n",
+          "image": "/img/mioto3.png"
         },
         {
-          "title": "Powered by React",
-          "description": "Extend or customize your website layout by reusing React. Docusaurus can         be extended while reusing the same header and footer.\n",
-          "image": "/img/undraw_docusaurus_react.svg"
+          "title": "Für dich da",
+          "description": "Wir beantworten dir deine Fragen.\n",
+          "image": "/img/mioto1.png"
         }
       ],
       "_template": "features"
