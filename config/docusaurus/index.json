@@ -37,7 +37,7 @@
           },
           {
             "label": "Hilfe",
-            "to": "src/pages/example.mdx",
+            "to": "src/pages/help.mdx",
             "_template": "internal"
           }
         ]
