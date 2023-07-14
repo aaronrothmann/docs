@@ -32,11 +32,11 @@
         ]
       },
       {
-        "title": "Community",
+        "title": "Finde uns auf",
         "items": [
           {
-            "label": "Stack Overflow",
-            "href": "https://stackoverflow.com/questions/tagged/docusaurus",
+            "label": "Linked In",
+            "href": "https://www.linkedin.com/company/miotolabs",
             "_template": "external"
           },
           {
