@@ -11,13 +11,6 @@
       "label": "Changelog",
       "link": "blog",
       "position": "left"
-    },
-    {
-      "label": "MDX Page",
-      "link": "page",
-      "docLink": "src/pages/Test-MDX-Page.mdx",
-      "pageLink": "src/pages/Test-MDX-Page.mdx",
-      "position": "left"
     }
   ],
   "logo": {
@@ -75,5 +68,5 @@
     ],
     "copyright": "My Project, Inc. Built with Docusaurus."
   },
-  "url": "https://tinasaurus.vercel.app/"
+  "url": "https://mioto.app/docs"
 }
