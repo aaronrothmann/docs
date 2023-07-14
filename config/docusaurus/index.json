@@ -31,13 +31,13 @@
         "title": "Docs",
         "items": [
           {
-            "label": "Hilfe",
-            "to": "src/pages/help.mdx",
+            "label": "Los geht's",
+            "to": "docs/intro.mdx",
             "_template": "internal"
           },
           {
-            "label": "Los geht's",
-            "to": "docs/intro.mdx",
+            "label": "Hilfe",
+            "to": "src/pages/help.mdx",
             "_template": "internal"
           }
         ]
