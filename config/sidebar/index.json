@@ -2,13 +2,13 @@
   "label": "Docs Sidebar",
   "items": [
     {
+      "document": "docs/intro.mdx",
+      "_template": "doc"
+    },
+    {
       "title": "Zu Mioto",
       "href": "https://mioto.app",
       "_template": "link"
-    },
-    {
-      "document": "docs/intro.mdx",
-      "_template": "doc"
     }
   ]
 }
