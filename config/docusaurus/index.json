@@ -25,7 +25,7 @@
         "title": "Docs",
         "items": [
           {
-            "label": "Introduction",
+            "label": "Los geht's",
             "to": "docs/intro.mdx",
             "_template": "internal"
           }
