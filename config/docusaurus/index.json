@@ -28,6 +28,11 @@
             "label": "Los geht's",
             "to": "docs/intro.mdx",
             "_template": "internal"
+          },
+          {
+            "label": "Hilfe",
+            "to": "src/pages/example.mdx",
+            "_template": "internal"
           }
         ]
       },
