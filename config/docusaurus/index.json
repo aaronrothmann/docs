@@ -2,6 +2,12 @@
   "label": "Settings",
   "navbar": [
     {
+      "label": "Hilfe",
+      "link": "page",
+      "pageLink": "src/pages/help.mdx",
+      "position": "left"
+    },
+    {
       "label": "Docs",
       "link": "doc",
       "docLink": "docs/intro.mdx",
