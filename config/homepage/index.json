@@ -23,9 +23,9 @@
           "image": "/img/mioto3.png"
         },
         {
-          "title": "Powered by React",
-          "description": "Extend or customize your website layout by reusing React. Docusaurus can         be extended while reusing the same header and footer.\n",
-          "image": "/img/undraw_docusaurus_react.svg"
+          "title": "Für dich da",
+          "description": "Wir beantworten dir deine Fragen.\n",
+          "image": "/img/mioto1.png"
         }
       ],
       "_template": "features"
