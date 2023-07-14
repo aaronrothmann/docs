@@ -5,6 +5,7 @@
   "blocks": [
     {
       "title": "Mioto Dokumentation",
+      "subtitle": "Dein no-code Baukasten für digitale Beratungsprozesse.",
       "document": "docs/intro.mdx",
       "documentLabel": "Los geht's!",
       "_template": "hero"
