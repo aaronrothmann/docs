@@ -43,11 +43,6 @@
             "label": "Instagram",
             "href": "https://www.instagram.com/miotolabs/",
             "_template": "external"
-          },
-          {
-            "label": "Twitter",
-            "href": "https://twitter.com/docusaurus",
-            "_template": "external"
           }
         ]
       },
