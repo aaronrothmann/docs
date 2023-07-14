@@ -52,10 +52,10 @@
         ]
       },
       {
-        "title": "More",
+        "title": "Legal",
         "items": [
           {
-            "label": "Blog",
+            "label": "Impressum",
             "_template": "blog"
           },
           {
