@@ -1,9 +1,10 @@
 {
   "label": "Homepage",
-  "title": "Hello from Tina + Docusaurus!",
+  "title": "Mioto Dokumentation",
   "description": "Description will go into a meta tag in <head />",
   "blocks": [
     {
+      "title": "Mioto Dokumentation",
       "document": "docs/intro.mdx",
       "documentLabel": "Docusaurus Tutorial - 5min ⏱️",
       "_template": "hero"
