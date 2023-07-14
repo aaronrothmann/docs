@@ -55,6 +55,11 @@
         "title": "Legal",
         "items": [
           {
+            "label": "Datenschutz",
+            "href": "https://mioto.app/privacy",
+            "_template": "external"
+          },
+          {
             "label": "Impressum",
             "href": "https://mioto.app/imprint",
             "_template": "external"
