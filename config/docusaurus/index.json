@@ -21,10 +21,10 @@
     }
   ],
   "logo": {
-    "alt": "Tina",
-    "src": "/img/tina-icon.svg"
+    "alt": "",
+    "src": "/img/icon transp.png"
   },
-  "title": "Tinasaurus",
+  "title": "Mioto Dokumentation",
   "footer": {
     "style": "dark",
     "links": [
