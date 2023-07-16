@@ -11,10 +11,7 @@ Für weitergehende Informationen über die Template-Sprache lohnt sich ein Blick
 
 ### Einbinden von Variablen
 
-\<aside>
 💡 Du kannst die einzusetzende Variable direkt bei der erzeugenden Eingabe kopieren. So vermeidest du Fehler bei der Formatierung. Mittels strg/cmd + v kannst du die Variable dann in Word einfügen.
-
-\</aside>
 
 Sämtliche Eingaben in eine Mioto-Anwendung stehen in einem Dokumententemplate zur Verfügung. Die Referenzierung erfolgt über den Blocknamen und das Label der Eingabe. Der Variablenname steht dabei in geschweiften Klammern. Wenn für eine Variable kein Wert von der Nutzer\:in eingegeben wurde, wird der Platzhalter “#####” eingesetzt. Um das zu verhindern, können Bedingungen verwendet werden.
 
@@ -24,8 +21,9 @@ Nicht verwirren lassen: Die Regeln oben gelten nur für die Variablennamen, die 
 
 Dies könnte im Word Template dann so aussehen:
 
+```
 {Abfrage.Vor\_und\_Nachname}, wohnhaft in {Abfrage.Adresse} hat innerhalb von 14 Tagen die Zahlung auf das Konto mit der IBAN {Monetaere\_Vereinbarungen.IBAN\_des\_Empfaengers} zu leisten. 
-
+```
 
 ### Bedingungen - wenn eine Variable gesetzt wurde
 
@@ -33,17 +31,19 @@ Je nachdem wie eine Anwendung gebaut wurde, können Werte manchmal nicht abgefra
 
 Mit dieser Schreibweise wird ein Wert nur dann eingesetzt, wenn er auch abgefragt wurde. Wenn der Wert nicht vorhanden ist, wird nichts im Text eingesetzt (If-Statement).
 
+```
 {#Abfrage.Vor\_und\_Nachname}
 Die Person heißt {Abfrage.Vor\_und\_Nachname}.
 {/Abfrage.Vor\_und\_Nachname}
-
+```
 
 Auf diese Weise wird der Text "Die Person heißt Max Mustermann.” in das Dokument eingesetzt, wenn das Feld “Vor-und Nachname” im Block “Abfrage” NICHT ausgefüllt wurde.
 
+```
 {^Abfrage.Vor\_und\_Nachname}
 Die Person heißt Max Mustermann.
 {/Abfrage.Vor\_und\_Nachname}
-
+```
 
 ### Bedingungen - wenn eine Variable auf einen bestimmten Wert gesetzt wurde
 
