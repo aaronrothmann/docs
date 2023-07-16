@@ -2,16 +2,17 @@
   "label": "Docs Sidebar",
   "items": [
     {
-      "document": "docs/Verffentlichen-und-Einbinden.mdx",
-      "_template": "doc"
-    },
-    {
       "document": "docs/intro.mdx",
       "_template": "doc"
     },
     {
       "document": "docs/Anwendungen-verwalten.mdx",
       "label": "Anwendungen verwalten",
+      "_template": "doc"
+    },
+    {
+      "document": "docs/Verffentlichen-und-Einbinden.mdx",
+      "label": "Veröffentlichen und Einbinden",
       "_template": "doc"
     },
     {
