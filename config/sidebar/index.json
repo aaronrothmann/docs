@@ -3,7 +3,7 @@
   "items": [
     {
       "title": "Dynamische Dokumente erstellen",
-      "link": "none",
+      "link": "generated",
       "items": [
         {
           "document": "docs/einfuehrung-zu-dokumenten.mdx",
