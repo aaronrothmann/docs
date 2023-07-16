@@ -2,11 +2,6 @@
   "label": "Docs Sidebar",
   "items": [
     {
-      "title": "Dynamische Dokumente",
-      "link": "none",
-      "_template": "category"
-    },
-    {
       "document": "docs/intro.mdx",
       "_template": "doc"
     },
