@@ -2,6 +2,15 @@
   "label": "Docs Sidebar",
   "items": [
     {
+      "document": "docs/intro.mdx",
+      "_template": "doc"
+    },
+    {
+      "document": "docs/anwendungen-verwalten.mdx",
+      "label": "Anwendungen verwalten",
+      "_template": "doc"
+    },
+    {
       "title": "Anwendungen bauen",
       "link": "generated",
       "items": [
@@ -14,6 +23,7 @@
           "_template": "doc"
         },
         {
+          "document": "docs/vorschau-und-veroeffentlichen.mdx",
           "_template": "doc"
         },
         {
@@ -21,15 +31,6 @@
         }
       ],
       "_template": "category"
-    },
-    {
-      "document": "docs/intro.mdx",
-      "_template": "doc"
-    },
-    {
-      "document": "docs/anwendungen-verwalten.mdx",
-      "label": "Anwendungen verwalten",
-      "_template": "doc"
     },
     {
       "document": "docs/veroeffentlichen-und-einbinden.mdx",
