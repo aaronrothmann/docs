@@ -2,6 +2,26 @@
   "label": "Docs Sidebar",
   "items": [
     {
+      "title": "Anwendungen bauen",
+      "link": "generated",
+      "items": [
+        {
+          "document": "docs/builder-bloecke.mdx",
+          "_template": "doc"
+        },
+        {
+          "_template": "doc"
+        },
+        {
+          "_template": "doc"
+        },
+        {
+          "_template": "doc"
+        }
+      ],
+      "_template": "category"
+    },
+    {
       "document": "docs/intro.mdx",
       "_template": "doc"
     },
