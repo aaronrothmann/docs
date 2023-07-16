@@ -27,6 +27,7 @@
           "_template": "doc"
         },
         {
+          "document": "docs/theming.mdx",
           "_template": "doc"
         }
       ],
