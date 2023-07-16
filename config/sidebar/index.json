@@ -2,6 +2,23 @@
   "label": "Docs Sidebar",
   "items": [
     {
+      "title": "Dynamische Dokumente erstellen",
+      "link": "none",
+      "items": [
+        {
+          "document": "docs/einfuehrung-zu-dokumenten.mdx",
+          "_template": "doc"
+        },
+        {
+          "_template": "doc"
+        },
+        {
+          "_template": "doc"
+        }
+      ],
+      "_template": "category"
+    },
+    {
       "document": "docs/intro.mdx",
       "_template": "doc"
     },
