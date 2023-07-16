@@ -2,25 +2,6 @@
   "label": "Docs Sidebar",
   "items": [
     {
-      "title": "Dynamische Dokumente erstellen",
-      "link": "generated",
-      "items": [
-        {
-          "document": "docs/einfuehrung-zu-dokumenten.mdx",
-          "_template": "doc"
-        },
-        {
-          "document": "docs/tutorial-dokument-generator.mdx",
-          "_template": "doc"
-        },
-        {
-          "document": "docs/Template-Sprache.mdx",
-          "_template": "doc"
-        }
-      ],
-      "_template": "category"
-    },
-    {
       "document": "docs/intro.mdx",
       "_template": "doc"
     },
@@ -47,6 +28,25 @@
         },
         {
           "document": "docs/theming.mdx",
+          "_template": "doc"
+        }
+      ],
+      "_template": "category"
+    },
+    {
+      "title": "Dynamische Dokumente erstellen",
+      "link": "generated",
+      "items": [
+        {
+          "document": "docs/einfuehrung-zu-dokumenten.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/tutorial-dokument-generator.mdx",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/Template-Sprache.mdx",
           "_template": "doc"
         }
       ],
