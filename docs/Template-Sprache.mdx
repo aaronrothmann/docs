@@ -2,3 +2,51 @@
 title: Template-Sprache
 ---
 
+Im Folgenden wird erklärt, wie die in einer Mioto-Anwendung abgefragten Daten in ein Template eingebunden werden können.
+
+Für weitergehende Informationen über die Template-Sprache lohnt sich ein Blick in die Dokumentation der von Mioto verwendeten Softwarebibliothek:
+
+* Allgemeine Informationen, zur Verwendung von Variablen und einfachen wenn/dann-Bedingungen: [https://docxtemplater.com/docs/tag-types/](https://docxtemplater.com/docs/tag-types/)
+* Für komplexere Bedingungen: [https://docxtemplater.com/docs/angular-parse/#conditions](https://docxtemplater.com/docs/angular-parse/#conditions)
+
+### Einbinden von Variablen
+
+\<aside>
+💡 Du kannst die einzusetzende Variable direkt bei der erzeugenden Eingabe kopieren. So vermeidest du Fehler bei der Formatierung. Mittels strg/cmd + v kannst du die Variable dann in Word einfügen.
+
+\</aside>
+
+Sämtliche Eingaben in eine Mioto-Anwendung stehen in einem Dokumententemplate zur Verfügung. Die Referenzierung erfolgt über den Blocknamen und das Label der Eingabe. Der Variablenname steht dabei in geschweiften Klammern. Wenn für eine Variable kein Wert von der Nutzer\:in eingegeben wurde, wird der Platzhalter “#####” eingesetzt. Um das zu verhindern, können Bedingungen verwendet werden.
+
+In den Variablennamen werden Leerzeichen durch Unterstriche “\_”, deutsche Zeichen wie Umlaute und “ß” durch die Entsprechungen im internationalen Raum ersetzt (ü → ue, Ö → Oe, ß → ss). Alle anderen Sonderzeichen, wie bspw. Punkt, Komma, Raute, Bindestrich, Ausrufezeichen werden ersatzlos entfernt.
+
+Nicht verwirren lassen: Die Regeln oben gelten nur für die Variablennamen, die in einem Template verwendet werden können. Die  Antworten der Nutzer\:in werden genauso eingesetzt, wie sie eingegeben wurden.
+
+Dies könnte im Word Template dann so aussehen:
+
+{Abfrage.Vor\_und\_Nachname}, wohnhaft in {Abfrage.Adresse} hat innerhalb von 14 Tagen die Zahlung auf das Konto mit der IBAN {Monetaere\_Vereinbarungen.IBAN\_des\_Empfaengers} zu leisten. 
+
+
+### Bedingungen - wenn eine Variable gesetzt wurde
+
+Je nachdem wie eine Anwendung gebaut wurde, können Werte manchmal nicht abgefragt worden sein.
+
+Mit dieser Schreibweise wird ein Wert nur dann eingesetzt, wenn er auch abgefragt wurde. Wenn der Wert nicht vorhanden ist, wird nichts im Text eingesetzt (If-Statement).
+
+{#Abfrage.Vor\_und\_Nachname}
+Die Person heißt {Abfrage.Vor\_und\_Nachname}.
+{/Abfrage.Vor\_und\_Nachname}
+
+
+Auf diese Weise wird der Text "Die Person heißt Max Mustermann.” in das Dokument eingesetzt, wenn das Feld “Vor-und Nachname” im Block “Abfrage” NICHT ausgefüllt wurde.
+
+{^Abfrage.Vor\_und\_Nachname}
+Die Person heißt Max Mustermann.
+{/Abfrage.Vor\_und\_Nachname}
+
+
+### Bedingungen - wenn eine Variable auf einen bestimmten Wert gesetzt wurde
+
+Um zu checken, ob eine Variable auf einen bestimmten Wert gesetzt wurde, kann folgende Syntax im Template verwendet werden.
+
+Wichtig: Die Antwort (hier “Ja”) muss in geraden Anführungszeichen (wie im Beispiel) eingesetzt werden. Im Deutschen ändert Word diese häufig automatisch in typographische Anführungszeichen. Dies kann so deaktiviert werden: [https://support.microsoft.com/de-de/office/intelligente-anführungszeichen-in-word-702fc92e-b723-4e3d-b2cc-71dedaf2f343](https://support.microsoft.com/de-de/office/intelligente-anf%C3%BChrungszeichen-in-word-702fc92e-b723-4e3d-b2cc-71dedaf2f343)
