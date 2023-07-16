@@ -14,8 +14,8 @@
       "items": [
         {
           "title": "Baukasten",
-          "description": "Baue dir aus verschiedenen Blöcken dein individuelles Automatisierungstool. \nDu kannst Vorlagen nutzen, um nicht alles selbst bauen zu müssen.\n",
-          "image": "/img/Blocks.png"
+          "description": "Baue dir aus verschiedenen Blöcken dein individuelles Automatisierungstool.\nDu kannst Vorlagen nutzen, um nicht alles selbst bauen zu müssen.\n",
+          "image": "/img/Frame 1344.svg"
         },
         {
           "title": "Erstellung eines Formulars",
@@ -24,7 +24,7 @@
         },
         {
           "title": "Daten und Dokumente",
-          "description": "Von einfachen Briefen bis hin zu umfangreichen Verträgen ermöglicht Mioto \neine fein abgestimmte Dokumentenerstellung unter Verwendung von Client- oder API-bereitgestellten Daten.\n",
+          "description": "Von einfachen Briefen bis hin zu umfangreichen Verträgen ermöglicht Mioto\neine fein abgestimmte Dokumentenerstellung unter Verwendung von Client- oder API-bereitgestellten Daten.\n",
           "image": "/img/Daten.png"
         }
       ],
