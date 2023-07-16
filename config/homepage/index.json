@@ -18,9 +18,9 @@
           "image": "/img/Blocks.png"
         },
         {
-          "title": "Lirum Larum",
-          "description": "Hier steht noch nichts von Wert.\n",
-          "image": "/img/mioto3.png"
+          "title": "Erstellung eines Formulars",
+          "description": "Verzweige die Verbindungen deiner Blöcke, indem du ihnen logische Bedingungen gibst. Gestalte so den Dialog- und Workflow für Endnutzer\\:innen deines Tools.\n",
+          "image": "/img/Decision Tree.png"
         },
         {
           "title": "Für dich da",
