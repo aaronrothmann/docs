@@ -23,9 +23,9 @@
           "image": "/img/Decision Tree.png"
         },
         {
-          "title": "Für dich da",
-          "description": "Wir beantworten dir deine Fragen.\n",
-          "image": "/img/mioto1.png"
+          "title": "Daten und Dokumente",
+          "description": "Von einfachen Briefen bis hin zu umfangreichen Verträgen ermöglicht Mioto \neine fein abgestimmte Dokumentenerstellung unter Verwendung von Client- oder API-bereitgestellten Daten.\n",
+          "image": "/img/Daten.png"
         }
       ],
       "_template": "features"
