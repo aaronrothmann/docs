@@ -9,26 +9,6 @@
       "document": "docs/intro.mdx",
       "documentLabel": "Los geht's!",
       "_template": "hero"
-    },
-    {
-      "items": [
-        {
-          "title": "Baukasten",
-          "description": "Baue dir aus verschiedenen Blöcken dein individuelles Automatisierungstool.\nDu kannst Vorlagen nutzen, um nicht alles selbst bauen zu müssen.\n",
-          "image": "/img/Logo_1.png"
-        },
-        {
-          "title": "Erstellung eines Formulars",
-          "description": "Verzweige die Verbindungen deiner Blöcke, indem du ihnen logische Bedingungen gibst. Gestalte so den Dialog- und Workflow für Endnutzer\\:innen deines Tools.\n",
-          "image": "/img/Logo_2.png"
-        },
-        {
-          "title": "Daten und Dokumente",
-          "description": "Von einfachen Briefen bis hin zu umfangreichen Verträgen ermöglicht Mioto\neine fein abgestimmte Dokumentenerstellung unter Verwendung von Client- oder API-bereitgestellten Daten.\n",
-          "image": "/img/Logo_3.png"
-        }
-      ],
-      "_template": "features"
     }
   ]
 }
