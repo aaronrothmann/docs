@@ -9,6 +9,9 @@
       "document": "docs/intro.mdx",
       "documentLabel": "Los geht's!",
       "_template": "hero"
+    },
+    {
+      "_template": "features"
     }
   ]
 }
