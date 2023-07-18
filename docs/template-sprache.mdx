@@ -1,0 +1,97 @@
+---
+title: Template-Sprache
+---
+
+
+### Allgemeines
+
+In Dokumententemplates können sämtliche Variablen referenziert werden, die in der Mioto-Anwendung gesetzt werden.
+
+Die Refernzierung erfolgt über eine spezielle Template-Sprache - ausgedrückt durch geschweifte Klammern. Wenn ein Dokument generiert wird, läuft unsere Software über das Template, erkennt diese Sprache und ersetzt diese.
+
+Ein Absatz im Word-Dokument könnte so aussehen:
+
+```
+{Abfrage.Vor_und_Nachname}, wohnhaft in {Abfrage.Adresse} hat innerhalb von 14 Tagen die Zahlung auf das Konto mit der IBAN {Monetaere_Vereinbarungen.IBAN_des_Empfaengers} zu leisten. 
+```
+
+Das übrige Word-Dokument wird von unserer Software nicht beeinflusst. Du kannst das Template also beliebig stylen und formatieren - wie etwa dein eigenes Logo verwenden. 
+
+Die Template-Sprache bietet nicht nur die Möglichkeit, Variablen direkt einzusetzen. Es gibt auch die Möglickeit, if-Bedingungen zu verwenden. Beispielsweise: Wenn diese Variable vorliegt, füge diesen Absatz ein.
+
+### Variablen aus dem Builder kopieren
+
+Die Variablen können im Builder am Ort, wo sie erzeugt werden, kopiert werden. Nutzereingaben können im jeweiligen Eingabe-Block referenziert werden (siehe Bild).
+
+XXX
+
+### Einbinden von Variablen
+
+Die Variable kann jetzt im Word-Dokument durch strg/cmd + v (oder Rechtsklick -> Einfügen) an beliebiger Stelle eingefügt werden.
+
+Der eingesetzte Wert wird bei der Generierung das selbe Styling haben, wie die Variable. Formatierst du den eingesetzten Text Fett und auf Schriftgröße 6, wird so auch der eingesetzte Wert von der Anwendung generiert.
+
+Die Referenzierung erfolgt derzeit über den Blocknamen und das Label der Eingabe. Beides sollte deshalb nicht mehr im Builder geändert werden, sobald die Variable in einem Dokument verwendet wird. In einer zukünftigen Version von Mioto werden wir dieses Problem adressieren.
+
+Wenn für eine Variable kein Wert von der Nutzer:in eingegeben wurde, wird der Platzhalter “#####” eingesetzt. Um das zu verhindern, können if-Bedingungen verwendet werden.
+
+### if-Bedingungen
+
+Variablen können auch als if-Bedingungen verwendet werden. Dafür muss direkt nach der geschweiften Klammer ein # oder ^ eingesetzt werden. Die if-Bedingung wird geschlossen, indem ein / hinter die geschweifte Klammer gesetzt wird
+
+Mit dieser Schreibweise wird ein Wert nur dann eingesetzt, wenn er auch abgefragt wurde. Wenn der Wert nicht vorhanden ist, wird nichts im Text eingesetzt:
+
+```
+{#Abfrage.Vor_und_Nachname}
+Die Person heißt {Abfrage.Vor_und_Nachname}.
+{/Abfrage.Vor_und_Nachname}
+```
+
+Auf diese Weise wird der Text "Die Person heißt Max Mustermann.” in das Dokument eingesetzt, wenn das Feld “Vor-und Nachname” im Block “Abfrage” NICHT ausgefüllt wurde:
+
+```
+{^Abfrage.Vor_und_Nachname}
+Die Person heißt Max Mustermann.
+{/Abfrage.Vor_und_Nachname}
+```
+
+If-Bedingungen können auch überprüfen, ob eine Variable auf einen bestimmten Wert gesetzt wurde:
+
+```
+{#Ueberpruefung.Datenschutzhinweis == "Ja"}
+Auf die Datenschutzerklärung wird hingewiesen.
+{/}
+```
+
+Die folgenden Operatoren werden unterstützt: == != >= > <= <
+
+Achtung. Hier sind zwei Fallstricke zu beachten:
+
+1. Die if-Bedingung wird hier anders geschlossen (durch ein / in geschweiften Klammern).
+
+2. Die Antwort (hier "Ja") muss in geraden Anführungszeichen (wie im Beispiel) eingesetzt werden. Word ändert diese häufig automatisch in typographische Anführungszeichen. Dies kann so deaktiviert werden: [https://support.microsoft.com/de-de/office/intelligente-anführungszeichen-in-word-702fc92e-b723-4e3d-b2cc-71dedaf2f343](https://support.microsoft.com/de-de/office/intelligente-anf%C3%BChrungszeichen-in-word-702fc92e-b723-4e3d-b2cc-71dedaf2f343 "")
+
+### Multi-Select
+
+Bei Multi-Select-Abfragen ist vorher nicht klar, wie viele Angaben Nutzer:innen machen werden. Wir müssen also damit umgehen, dass keine, eine oder mehrere Angaben gemacht werden.
+
+Hierfür sind einige fortgeschrittene Funktionen nötig, die hier noch nicht abschließend dokumentiert werden können. Wendet euch mit Fragen gerne immer an support@mioto.app
+
+Die Template-Sprache dafür könnte so aussehen:
+
+```
+{#Auswahl_des_Template.Templateformate.length > 0}
+Der Verlag stellt für das Manuskript ein Template in folgenden Formaten bereit:
+{#Auswahl_des_Template.Templateformate}
+-	{.}
+{/Auswahl_des_Template.Templateformate}
+{/}
+```
+
+Zunächst wird überprüft, ob es überhaupt Antworten gab. Wenn nicht, wird der ganze Absatz ausgelassen.
+
+Gibt es Antworten (ist die "length" des Antwortspeichers über 0), wird der Absatz hinzugefügt.
+
+Nun wird über die einzelnen Antworten geloopt. Jede gegebene Antwort wird in den Format von {.} ausgegeben - hier also als Strichliste.
+
+Schließlich wird der Loop und die if-Bedingung jeweils durch / geschlossen.
