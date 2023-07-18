@@ -1,6 +1,5 @@
 import React from "react";
 import { Features } from "../Features";
-import { Featured } from "../Featured";
 import { Hero } from "../Hero";
 
 export const Blocks = ({ blocks }) => {
@@ -19,12 +18,6 @@ export const Blocks = ({ blocks }) => {
                 return (
                   <div data-tinafield={`blocks.${i}`} key={i + block._template}>
                     <Features data={block} index={i} />
-                  </div>
-                );
-              case "featured":
-                return (
-                  <div data-tinafield={`blocks.${i}`} key={i + block._template}>
-                    <Featured data={block} index={i} />
                   </div>
                 );
               default:
