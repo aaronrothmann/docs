@@ -11,6 +11,12 @@
       "_template": "hero"
     },
     {
+      "items": [
+        {
+          "title": "x",
+          "description": "x\n"
+        }
+      ],
       "_template": "features"
     }
   ]
