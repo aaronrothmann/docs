@@ -15,7 +15,7 @@
       "link": "generated",
       "items": [
         {
-          "document": "docs/builder-bloecke.mdx",
+          "document": "docs/builder-und-bloecke.mdx",
           "_template": "doc"
         },
         {
@@ -46,7 +46,7 @@
           "_template": "doc"
         },
         {
-          "document": "docs/Template-Sprache.mdx",
+          "document": "docs/template-sprache.mdx",
           "_template": "doc"
         }
       ],
