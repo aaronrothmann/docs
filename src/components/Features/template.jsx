@@ -25,11 +25,6 @@ export const FeaturesBlockTemplate = {
           label: "Description",
           type: "rich-text",
         },
-        {
-          name: "image",
-          label: "Image",
-          type: "image",
-        },
       ],
     },
   ],
