@@ -5,32 +5,10 @@ export const FeaturesBlockTemplate = {
   label: "Features",
   fields: [
     {
-      name: "items",
-      label: "Features",
-      type: "object",
-      list: true,
-      ui: {
-        itemProps: (item) => ({
-          label: item.title,
-        }),
+      name: "link",
+      label: "Link",
+      type: "string",
       },
-      fields: [
-        {
-          name: "title",
-          label: "Title",
-          type: "string",
-        },
-        {
-          name: "description",
-          label: "Description",
-          type: "rich-text",
-        },
-        {
-          name: "image",
-          label: "Image",
-          type: "image",
-        },
-      ],
     },
   ],
 };
