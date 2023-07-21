@@ -9,6 +9,15 @@
       "document": "docs/intro.mdx",
       "documentLabel": "Los geht's!",
       "_template": "hero"
+    },
+    {
+      "items": [
+        {
+          "title": "not relevant",
+          "description": "not relevant\n"
+        }
+      ],
+      "_template": "features"
     }
   ]
 }
