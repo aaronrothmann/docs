@@ -8,7 +8,6 @@ export const FeaturesBlockTemplate = {
       name: "link",
       label: "Link",
       type: "string",
-      },
     },
   ],
 };
