@@ -13,9 +13,9 @@
       "position": "left"
     },
     {
-      "label": "Hilfe",
+      "label": "Aktuelles",
       "link": "page",
-      "pageLink": "src/pages/help.mdx",
+      "pageLink": "src/pages/aktuelles.mdx",
       "position": "left"
     }
   ],
