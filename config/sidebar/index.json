@@ -15,6 +15,11 @@
       "link": "generated",
       "items": [
         {
+          "document": "docs/bloecke.mdx",
+          "label": "Blöcke",
+          "_template": "doc"
+        },
+        {
           "document": "docs/builder-und-bloecke.mdx",
           "_template": "doc"
         },
