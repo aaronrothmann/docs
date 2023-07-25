@@ -15,12 +15,13 @@
       "link": "generated",
       "items": [
         {
-          "document": "docs/bloecke.mdx",
-          "label": "Blöcke",
+          "document": "docs/builder.mdx",
+          "label": "Builder",
           "_template": "doc"
         },
         {
-          "document": "docs/builder-und-bloecke.mdx",
+          "document": "docs/bloecke.mdx",
+          "label": "Blöcke",
           "_template": "doc"
         },
         {
