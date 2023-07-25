@@ -1,0 +1,16 @@
+---
+title: 'Variablen, Logik, Eingabe'
+date: '2023-07-25'
+---
+
+Grundlegendes Update, fast zwei Monate in the making.
+
+Es ist nun möglich:
+
+* Nutzereingaben als Variablen in späteren Blöcken einzufügen (bislang ging das nur im Dokumententemplate). Wir haben hier eine grundlegende Infrastruktur geschaffen, die die Entwicklung vieler Features in der Pipeline deutlich beschleunigen wird.
+* Komplexe logische Bedingungen zu formulieren, die den Pfad der Anwendung festlegen
+  * Dies ist in jedem Block unter "Verbindungen" möglich, zur besseren Übersicht gibt es dafür aber auch einen eigenen Logikblock
+  * In jedem Block können auch Bedingungen an vorherige Eingaben gestellt werden. So kann sich eine Nutzereingabe auch erst zwei Blöcke später auf den Verlauf auswirken, soweit dies gewünscht ist.
+* Der Entscheidungs- und Formularblock ist jetzt als Eingabeblock zusammengefasst. 
+
+Das Interface ist an der ein oder anderen Stelle noch etwas optimierungsbedürftig. Das werden wir in den kommenden Wochen verbessern.
