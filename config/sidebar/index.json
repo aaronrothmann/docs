@@ -48,10 +48,6 @@
           "_template": "doc"
         },
         {
-          "document": "docs/tutorial-dokument-generator.mdx",
-          "_template": "doc"
-        },
-        {
           "document": "docs/template-sprache.mdx",
           "_template": "doc"
         }
