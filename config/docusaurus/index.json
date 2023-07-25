@@ -28,12 +28,17 @@
     "style": "dark",
     "links": [
       {
-        "title": "Docs",
+        "title": "Hilfe",
         "items": [
           {
             "label": "Los geht's",
             "to": "docs/intro.mdx",
             "_template": "internal"
+          },
+          {
+            "label": "support@mioto.app",
+            "href": "mailto:support@mioto.app",
+            "_template": "external"
           }
         ]
       },
