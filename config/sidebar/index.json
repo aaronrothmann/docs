@@ -41,6 +41,10 @@
       "docLink": "docs/dokumente.mdx",
       "items": [
         {
+          "document": "docs/template-einbinden.mdx",
+          "_template": "doc"
+        },
+        {
           "document": "docs/template-sprache.mdx",
           "_template": "doc"
         }
@@ -48,7 +52,7 @@
       "_template": "category"
     },
     {
-      "document": "docs/veroeffentlichen-und-einbinden.mdx",
+      "document": "docs/veroeffentlichen.mdx",
       "label": "Veröffentlichen und Einbinden",
       "_template": "doc"
     },
