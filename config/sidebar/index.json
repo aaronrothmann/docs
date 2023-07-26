@@ -41,12 +41,9 @@
     },
     {
       "title": "Dynamische Dokumente erstellen",
-      "link": "generated",
+      "link": "doc",
+      "docLink": "docs/dokumente.mdx",
       "items": [
-        {
-          "document": "docs/einfuehrung-zu-dokumenten.mdx",
-          "_template": "doc"
-        },
         {
           "document": "docs/template-sprache.mdx",
           "_template": "doc"
