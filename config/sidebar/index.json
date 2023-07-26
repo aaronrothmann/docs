@@ -11,14 +11,10 @@
       "_template": "doc"
     },
     {
-      "title": "Anwendungen bauen",
-      "link": "generated",
+      "title": "Der Builder",
+      "link": "doc",
+      "docLink": "docs/builder.mdx",
       "items": [
-        {
-          "document": "docs/builder.mdx",
-          "label": "Builder",
-          "_template": "doc"
-        },
         {
           "document": "docs/bloecke.mdx",
           "label": "Blöcke",
