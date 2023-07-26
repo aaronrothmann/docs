@@ -86,9 +86,9 @@ const formatNavbarItem = (item, subnav = false) => {
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: docusaurusData.title || "My Site",
-  tagline: docusaurusData.tagline || "Dinosaurs are cool",
-  url: docusaurusData.url || "https://tinasaurus.vercel.app/",
+  title: docusaurusData.title || "Mioto Dokumentation",
+  tagline: docusaurusData.tagline || "Dein no-code Baukasten für digitale Beratungsprozesse.",
+  url: docusaurusData.url || "https://miotodocs.netlify.app/",
   baseUrl: "/",
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
@@ -111,7 +111,7 @@ const config = {
           editUrl: docusaurusData.url + "/admin/#/collections/doc",
         },
         blog: {
-          showReadingTime: true,
+          showReadingTime: false,
           editUrl: docusaurusData.url + "/admin/#/collections/post",
         },
         theme: {
