@@ -1,21 +1,18 @@
 ---
 title: Blocktypen
-description: Eine Beschreibung der Blocktypen in Mioto
+description: Eine Beschreibung der Blocktypen in Mioto.
 ---
 
 ### Eingabe
 
 Diese Blöcke fragen Daten ab. Die Eingaben können den Verlauf deiner Anwendung steuern und als Variablen wiederverwendet und gespeichert werden. Folgendes sind mögliche Eingabetypen:
 
-Einfachauswahl: Ermöglicht die Auswahl einer Antwort aus mehreren vordefinierten Antworten.
-
-Mehrfachauswahl: Ermöglicht die Auswahl einer Antwort aus mehreren vordefinierten Antworten.
-
-Texteingabe: Eingabe einer Textzeile.
-
-Textfeld: Eingabe mehrerer Textzeilen.
-
-Nummerneingabe: Eingabe einer Zahl aus einem vordefinierten Zahlenbereich.
+ * **Einfachauswahl:** Ermöglicht die Auswahl einer Antwort aus mehreren vordefinierten Antworten.
+ * **Mehrfachauswahl:** Ermöglicht die Auswahl einer Antwort aus mehreren vordefinierten Antworten.
+    * Aufgrund der komplexen Logik dahinter, können Mehrfachauswahl-Eingaben derzeit nur im Dokumenten-Template verwendet werden. Sie können im Builder nicht als Variable eingebunden werden oder die Verbindung determinieren.
+ * **Texteingabe:** Eingabe einer Textzeile.
+ * **Textfeld:** Eingabe mehrerer Textzeilen.
+ * **Nummerneingabe:** Eingabe einer Zahl aus einem vordefinierten Zahlenbereich.
 
 ### Information
 
@@ -23,7 +20,9 @@ Informationsblöcke stellen relevante Informationen zur Verfügung.
 
 ### Dokument
 
-Diese Blöcke führen eine Aktion aus, die ein Dokument basierend auf vorherigen Eingaben generiert.
+Diese Blöcke generieren ein Dokument basierend auf vorherigen Eingaben generiert.
+
+[-> Zu den dynamischen Dokumenten](/docs/einfuehrung-zu-dokumenten "Dokumenten")
 
 ### Report
 
