@@ -8,7 +8,7 @@ description: Eine tiefe Auseinandersetzung mit der Template-Sprache zur Dokument
 
 In Dokumententemplates können sämtliche Variablen referenziert werden, die in der Mioto-Anwendung gesetzt werden.
 
-Die Refernzierung erfolgt über eine spezielle Template-Sprache - ausgedrückt durch geschweifte Klammern. Wenn ein Dokument generiert wird, läuft unsere Software über das Template, erkennt diese Sprache und ersetzt diese.
+Die Referenzierung erfolgt über eine spezielle Template-Sprache - ausgedrückt durch geschweifte Klammern. Wenn ein Dokument generiert wird, läuft unsere Software über das Template, erkennt diese Sprache und ersetzt diese.
 
 Ein Absatz im Word-Dokument könnte so aussehen:
 
@@ -18,11 +18,11 @@ Ein Absatz im Word-Dokument könnte so aussehen:
 
 Das übrige Word-Dokument wird von unserer Software nicht beeinflusst. Du kannst das Template also beliebig stylen und formatieren - wie etwa dein eigenes Logo verwenden. 
 
-Die Template-Sprache bietet nicht nur die Möglichkeit, Variablen direkt einzusetzen. Es gibt auch die Möglickeit, if-Bedingungen zu verwenden. Beispielsweise: Wenn diese Variable vorliegt, füge diesen Absatz ein.
+Die Template-Sprache bietet nicht nur die Möglichkeit, Variablen direkt einzusetzen. Es gibt auch die Möglichkeit, if-Bedingungen zu verwenden. Beispielsweise: Wenn diese Variable vorliegt, füge diesen Absatz ein.
 
 ### Variablen aus dem Builder kopieren
 
-Die Variablen können im Builder am Ort, wo sie erzeugt werden, kopiert werden. Nutzereingaben können im jeweiligen Eingabe-Block referenziert werden (siehe Bild).
+Die Variablen können im Builder am Ort, wo sie erzeugt werden, kopiert werden. Nutzer:inneneingaben können im jeweiligen Eingabe-Block referenziert werden (siehe Bild).
 
 ![Kopiere die Variable im Menü der Eingabe.](/img/var_kopieren.png "Kopiere die Variable im Menü der Eingabe.")
 ![Die Bestätigung zeigt dir den kopierten Namen an.](/img/var_kopiert.png "Die Bestätigung zeigt dir den kopierten Namen an.")
@@ -50,7 +50,7 @@ Die Person heißt {Abfrage.Vor_und_Nachname}.
 {/Abfrage.Vor_und_Nachname}
 ```
 
-Auf diese Weise wird der Text "Die Person heißt Max Mustermann.” in das Dokument eingesetzt, wenn das Feld “Vor-und Nachname” im Block “Abfrage” NICHT ausgefüllt wurde:
+Auf diese Weise wird der Text "Die Person heißt Max Mustermann." in das Dokument eingesetzt, wenn das Feld "Vor-und Nachname" im Block "Abfrage" NICHT ausgefüllt wurde:
 
 ```
 {^Abfrage.Vor_und_Nachname}
