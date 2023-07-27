@@ -8,7 +8,7 @@ description: Eine tiefe Auseinandersetzung mit der Template-Sprache zur Dokument
 
 In Dokumententemplates können sämtliche Variablen referenziert werden, die in der Mioto-Anwendung gesetzt werden.
 
-Die Referenzierung erfolgt über eine spezielle Template-Sprache - ausgedrückt durch geschweifte Klammern. Wenn ein Dokument generiert wird, läuft unsere Software über das Template, erkennt diese Sprache und ersetzt diese.
+Die Referenzierung erfolgt über eine Template-Sprache, die durch geschweifte Klammern ausgedrückt wird. Wenn ein Dokument generiert wird, läuft die Software über das Template, erkennt diese Sprache und ersetzt diese.
 
 Ein Absatz im Word-Dokument könnte so aussehen:
 
@@ -18,7 +18,7 @@ Ein Absatz im Word-Dokument könnte so aussehen:
 
 Das übrige Word-Dokument wird von unserer Software nicht beeinflusst. Du kannst das Template also beliebig stylen und formatieren - wie etwa dein eigenes Logo verwenden. 
 
-Die Template-Sprache bietet nicht nur die Möglichkeit, Variablen direkt einzusetzen. Es gibt auch die Möglichkeit, if-Bedingungen zu verwenden. Beispielsweise: Wenn diese Variable vorliegt, füge diesen Absatz ein.
+Die Template-Sprache bietet nicht nur die Möglichkeit, Variablen einzusetzen. Es gibt auch die Möglichkeit, if-Bedingungen zu verwenden. Beispielsweise: Wenn diese Variable vorliegt, füge diesen Absatz ein.
 
 ### Variablen aus dem Builder kopieren
 
@@ -40,7 +40,7 @@ Wenn für eine Variable kein Wert von der Nutzer:in eingegeben wurde, wird der P
 
 ### if-Bedingungen
 
-Variablen können auch als if-Bedingungen verwendet werden. Dafür muss direkt nach der geschweiften Klammer ein # oder ^ eingesetzt werden. Die if-Bedingung wird geschlossen, indem ein / hinter die geschweifte Klammer gesetzt wird
+Variablen können auch als if-Bedingungen verwendet werden. Dafür muss nach der geschweiften Klammer ein # oder ^ eingesetzt werden. Die if-Bedingung wird geschlossen, indem ein / hinter die geschweifte Klammer gesetzt wird
 
 Mit dieser Schreibweise wird ein Wert nur dann eingesetzt, wenn er auch abgefragt wurde. Wenn der Wert nicht vorhanden ist, wird nichts im Text eingesetzt:
 
