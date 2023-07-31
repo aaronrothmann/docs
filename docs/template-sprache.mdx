@@ -38,7 +38,7 @@ Die Referenzierung erfolgt derzeit über den Blocknamen und das Label der Eingab
 
 Wenn für eine Variable kein Wert von der Nutzer:in eingegeben wurde, wird der Platzhalter “#####” eingesetzt. Um das zu verhindern, können if-Bedingungen verwendet werden.
 
-### if-Bedingungen
+### if-Bedingungen: wenn Variable exisitiert
 
 Variablen können auch als if-Bedingungen verwendet werden. Dafür muss nach der geschweiften Klammer ein # oder ^ eingesetzt werden. Die if-Bedingung wird geschlossen, indem ein / hinter die geschweifte Klammer gesetzt wird
 
@@ -58,6 +58,8 @@ Die Person heißt Max Mustermann.
 {/Abfrage.Vor_und_Nachname}
 ```
 
+### Weiterführende if-Bedingunge
+
 If-Bedingungen können auch überprüfen, ob eine Variable auf einen bestimmten Wert gesetzt wurde:
 
 ```
@@ -66,35 +68,93 @@ Auf die Datenschutzerklärung wird hingewiesen.
 {/}
 ```
 
+oder
+
+```
+{#Berechnung.Streitwert > 5000}
+Landgericht
+{/}
+{#Berechnung.Streitwert <= 5000}
+Amtsgericht
+{/}
+```
+
+
+
 Die folgenden Operatoren werden unterstützt: == != >= > <= <
 
-Achtung. Hier sind zwei Fallstricke zu beachten:
+Achtung. Hier sind drei Fallstricke zu beachten:
 
 1. Die if-Bedingung wird hier anders geschlossen (durch ein / in geschweiften Klammern).
 
 2. Die Antwort (hier "Ja") muss in geraden Anführungszeichen (wie im Beispiel) eingesetzt werden. Word ändert diese häufig automatisch in typographische Anführungszeichen. Dies kann so deaktiviert werden: [https://support.microsoft.com/de-de/office/intelligente-anführungszeichen-in-word-702fc92e-b723-4e3d-b2cc-71dedaf2f343](https://support.microsoft.com/de-de/office/intelligente-anf%C3%BChrungszeichen-in-word-702fc92e-b723-4e3d-b2cc-71dedaf2f343 "")
 
-### Multi-Select
+3. Zahlenwerte werden ohne Anführungszeichen eingesetzt.
 
-Bei Multi-Select-Abfragen ist vorher nicht klar, wie viele Angaben Nutzer:innen machen werden. Wir müssen also damit umgehen, dass keine, eine oder mehrere Angaben gemacht werden.
+### Mehrfachauswahl
 
-Hierfür sind einige fortgeschrittene Funktionen nötig, die erst in Kürze weiter dokumentiert werden. Wendet euch mit Fragen gerne immer an [support@mioto.app](mailto:support@mioto.app "support@mioto.app") 
+Bei Mehrfachauswahl-Abfragen ist vorher nicht klar, wie viele Angaben Nutzer:innen machen werden. Wir müssen also damit umgehen, dass keine, eine oder mehrere Angaben gemacht werden.
 
 Die Template-Sprache dafür könnte so aussehen:
 
 ```
 {#Auswahl_des_Template.Templateformate.length > 0}
 Der Verlag stellt für das Manuskript ein Template in folgenden Formaten bereit:
+{/}
 {#Auswahl_des_Template.Templateformate}
 -	{.}
 {/Auswahl_des_Template.Templateformate}
-{/}
 ```
 
-Zunächst wird überprüft, ob es überhaupt Antworten gab. Wenn nicht, wird der ganze Absatz ausgelassen.
+Zunächst wird überprüft, ob es überhaupt Antworten gab. Wenn mindestens eine Antwort gegeben wurde, wird ein einleitender Satz hinzugefügt. Hierfür wird die length-Eigenschaft überprüft, indem hinter die Variable .length eingesetzt wird. *Blockname.Mehrfachauswahl.length* ist gleich der Anzahl der ausgewählten Antworten der Mehrfachauswahl. Dies funktioniert nur bei Mehrfachauswahl-Variablen. Für Fortgeschrittene: Gegebene Mehrfachauswahl-Antworten werden als Array gespeichert.
 
 Gibt es Antworten (ist die "length" des Antwortspeichers über 0), wird der Absatz hinzugefügt.
 
 Nun wird über die einzelnen Antworten geloopt. Jede gegebene Antwort wird in den Format von {.} ausgegeben - hier also als Strichliste.
 
 Schließlich wird der Loop und die if-Bedingung jeweils durch / geschlossen.
+
+---
+
+Innerhalb des Loops können die Variablen der Mehrfachauswahl auch in if-Bedingungen überprüft werden. So ist es möglich, die Variablen (=Antworten) nicht nur wiederzugeben, sondern je nach gegebenen Antworten Absätze dynamisch einzusetzen.
+
+Der . fungiert hier wie auch schon zuvor als Platzhalter für die Antworten der Mehrfachauswahl.
+
+```
+{#Fan_von.Deine_Clubs.length > 0}
+Meine Fangesänge
+{/}
+{#Fan_von.Deine_Clubs}
+{#. = "Hertha BSC"}
+Ha Ho He
+{/}
+{#. = "Union Berlin"}
+Eisern Union
+{/}
+{#. = "1. FC Köln"}
+Effzeh
+{/}
+{/Fan_von.Deine_Clubs}
+```
+
+Gehen wir davon aus, dass bei der Eingabe *Deine Clubs* im Block *Fan von* die Antworten *Hertha BSC* und *1. FC Köln* ausgewählt wurden.
+
+Die gespeicherten Daten für Fortgeschrittene: "Fan_von": {"Deine_Clubs": ["Hertha BSC", "1. FC Köln"]}
+
+Im Word-Template passiert nun folgendes:
+* *Fan_von.Deine_Clubs* enthält zwei Antworten und hat damit eine length von 2. Damit wird der Satz *Meine Fangesänge* eingefügt.
+* Die Anwendung loopt nun das erste Mal über *Fan_von.Deine_Clubs*. Der Platzhalter . hat den Wert "Hertha BSC", sodass nur die erste Bedingung zutrifft und *Ha Ho He* eingesetzt wird.
+* Die Anwendung loopt das zweite Mal über *Fan_von.Deine_Clubs*. Der Platzhalter . hat den Wert "1. FC Köln", sodass nur die dritte Bedingung zutrifft und *Effzeh* eingesetzt wird.
+* In *Fan_von.Deine_Clubs* sind keine weiteren Werte, deshalb beendet die Anwendung den Loop. 
+
+Im generierten Word Dokument steht nun:
+
+*Meine Fangesänge
+
+Ha Ho He
+Effzeh*
+
+Hier kannst du eine Mioto-Anwendung herunterladen, die alle hier gezeigten Beispiele enthält:
+
+wird am 31.07. eingefügt.
+
