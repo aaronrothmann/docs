@@ -13,7 +13,7 @@ Die Referenzierung erfolgt über eine Template-Sprache, die durch geschweifte Kl
 Ein Absatz im Word-Dokument könnte so aussehen:
 
 ```
-{Abfrage.Vor_und_Nachname}, wohnhaft in {Abfrage.Adresse} hat innerhalb von 14 Tagen die Zahlung auf das Konto mit der IBAN {Monetaere_Vereinbarungen.IBAN_des_Empfaengers} zu leisten. 
+{Abfrage.Vor_und_Nachname}, wohnhaft in {Abfrage.Wohnort} hat innerhalb von 14 Tagen die Zahlung auf das Konto mit der IBAN {Abfrage.IBAN_des_Empfaengers} zu leisten. 
 ```
 
 Das übrige Word-Dokument wird von unserer Software nicht beeinflusst. Du kannst das Template also beliebig stylen und formatieren - wie etwa dein eigenes Logo verwenden. 
@@ -118,43 +118,49 @@ Schließlich wird der Loop und die if-Bedingung jeweils durch / geschlossen.
 
 Innerhalb des Loops können die Variablen der Mehrfachauswahl auch in if-Bedingungen überprüft werden. So ist es möglich, die Variablen (=Antworten) nicht nur wiederzugeben, sondern je nach gegebenen Antworten Absätze dynamisch einzusetzen.
 
-Der . fungiert hier wie auch schon zuvor als Platzhalter für die Antworten der Mehrfachauswahl.
+Mit *Blockname.Eingabename[$index]* werden die Antworten der Mehrfachauswahl referenziert.
 
 ```
-{#Fan_von.Deine_Clubs.length > 0}
-Meine Fangesänge
+{#Sonstiges.Bestimmungen}
+{#Sonstiges.Bestimmungen[$index] == "Kommunikation"}
+Kommunikation
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 {/}
-{#Fan_von.Deine_Clubs}
-{#. = "Hertha BSC"}
-Ha Ho He
+{#Sonstiges.Bestimmungen[$index] == "Non Disclosure"}
+Geheimhaltung
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 {/}
-{#. = "Union Berlin"}
-Eisern Union
+{#Sonstiges.Bestimmungen[$index] == "Haftungsausschluss"}
+Haftungsausschluss
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 {/}
-{#. = "1. FC Köln"}
-Effzeh
-{/}
-{/Fan_von.Deine_Clubs}
+{/Sonstiges.Bestimmungen}
+
 ```
 
-Gehen wir davon aus, dass bei der Eingabe *Deine Clubs* im Block *Fan von* die Antworten *Hertha BSC* und *1. FC Köln* ausgewählt wurden.
+Gehen wir davon aus, dass bei der Eingabe *Bestimmungen* im Block *Sonstiges* die Antworten *Kommunikation* und *Haftungsausschluss* ausgewählt wurden.
 
-Die gespeicherten Daten für Fortgeschrittene: "Fan_von": {"Deine_Clubs": ["Hertha BSC", "1. FC Köln"]}
+Die gespeicherten Daten für Fortgeschrittene: "Sonstiges": {"Bestimmungen": ["Kommunikation", "Haftungsausschluss"]}
 
 Im Word-Template passiert nun folgendes:
-* *Fan_von.Deine_Clubs* enthält zwei Antworten und hat damit eine length von 2. Damit wird der Satz *Meine Fangesänge* eingefügt.
-* Die Anwendung loopt nun das erste Mal über *Fan_von.Deine_Clubs*. Der Platzhalter . hat den Wert "Hertha BSC", sodass nur die erste Bedingung zutrifft und *Ha Ho He* eingesetzt wird.
-* Die Anwendung loopt das zweite Mal über *Fan_von.Deine_Clubs*. Der Platzhalter . hat den Wert "1. FC Köln", sodass nur die dritte Bedingung zutrifft und *Effzeh* eingesetzt wird.
-* In *Fan_von.Deine_Clubs* sind keine weiteren Werte, deshalb beendet die Anwendung den Loop. 
+* *Sonstiges.Bestimmungen* existiert, deshalb wird der Inhalt der äußeren Klammer (von *{#Sonstiges.Bestimmungen}* bis *{/Sonstiges.Bestimmungen}*) ausgeführt. Weil es sich um Mehrfachauswahl-Antworten handelt, wird mehrfach über den Inhalt geloopt.
+* Die Anwendung loopt nun das erste Mal über *Sonstiges.Bestimmungen*. *Blockname.Eingabename[$index]* enthält nun die erste der Mehrfach-Antworten ("Kommunikation"). Die erste der drei Bedingungen im Loop trifft zu, deshalb wird der Absatz zum Kommunikation eingesetzt.
+* Die Anwendung loopt das zweite Mal über *Sonstiges.Bestimmungen*. *Blockname.Eingabename[$index]* enthält die zweite der Mehrfach-Antworten "Haftungsausschluss". Die dritte der drei Bedingungen im Loop trifft zu, deshalb wird der Absatz zum Haftungsausschluss eingesetzt.
 
 Im generierten Word Dokument steht nun:
 
-*Meine Fangesänge
+Kommunikation
 
-Ha Ho He
-Effzeh*
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+
+Haftungsausschluss
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+---
 
 Hier kannst du eine Mioto-Anwendung herunterladen, die alle hier gezeigten Beispiele enthält:
 
-wird am 31.07. eingefügt.
+[Anwendung downloaden](../assets/doc-starter.zip)
 
