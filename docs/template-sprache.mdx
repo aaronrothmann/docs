@@ -58,7 +58,7 @@ Die Person heißt Max Mustermann.
 {/Abfrage.Vor_und_Nachname}
 ```
 
-### Weiterführende if-Bedingunge
+### Weiterführende if-Bedingungen
 
 If-Bedingungen können auch überprüfen, ob eine Variable auf einen bestimmten Wert gesetzt wurde:
 
@@ -98,21 +98,23 @@ Bei Mehrfachauswahl-Abfragen ist vorher nicht klar, wie viele Angaben Nutzer:inn
 Die Template-Sprache dafür könnte so aussehen:
 
 ```
-{#Auswahl_des_Template.Templateformate.length > 0}
-Der Verlag stellt für das Manuskript ein Template in folgenden Formaten bereit:
+{#Erbrachte_Leistungen.Leistungen.length > 0}
+Die Haftung wird ausgeschlossen für
 {/}
-{#Auswahl_des_Template.Templateformate}
--	{.}
-{/Auswahl_des_Template.Templateformate}
+{#Erbrachte_Leistungen.Leistungen}
+- {.}
+{/Erbrachte_Leistungen.Leistungen}
 ```
 
 Zunächst wird überprüft, ob es überhaupt Antworten gab. Wenn mindestens eine Antwort gegeben wurde, wird ein einleitender Satz hinzugefügt. Hierfür wird die length-Eigenschaft überprüft, indem hinter die Variable .length eingesetzt wird. *Blockname.Mehrfachauswahl.length* ist gleich der Anzahl der ausgewählten Antworten der Mehrfachauswahl. Dies funktioniert nur bei Mehrfachauswahl-Variablen. Für Fortgeschrittene: Gegebene Mehrfachauswahl-Antworten werden als Array gespeichert.
 
 Gibt es Antworten (ist die "length" des Antwortspeichers über 0), wird der Absatz hinzugefügt.
 
-Nun wird über die einzelnen Antworten geloopt. Jede gegebene Antwort wird in den Format von {.} ausgegeben - hier also als Strichliste.
+Die if-Bedingung wird durch *{/}* geschlossen.
 
-Schließlich wird der Loop und die if-Bedingung jeweils durch / geschlossen.
+Nun wird über die einzelnen Antworten geloopt. Jede gegebene Antwort wird in den Format von {.} ausgegeben - hier also als Strichliste. Wenn keine Antworten gegeben wurden, wird auch nichts ausgegeben.
+
+Schließlich wird der Loop durch *{/Erbrachte_Leistungen.Leistungen}* geschlossen.
 
 ---
 
