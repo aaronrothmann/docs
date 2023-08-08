@@ -21,6 +21,10 @@
           "_template": "doc"
         },
         {
+          "document": "docs/Verbindungen-und-Verzweigungen.mdx",
+          "_template": "doc"
+        },
+        {
           "document": "docs/variablen.mdx",
           "_template": "doc"
         },
