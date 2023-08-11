@@ -1,37 +1,59 @@
 ---
-title: Blocktypen
-description: Eine Beschreibung der Blocktypen in Mioto.
+title: Blöcke
+description: Eine Beschreibung der Blockfunktionen in Mioto.
 ---
 
-### Eingabe
+# **Blöcke**
+
+Blöcke sind die elementaren Bausteine deiner Anwendung. Jeder Block repräsentiert eine spezifische Aktion, die deine Anwendung ausführen kann.
+
+Die grundlegenden Aktionen von Blöcken umfassen das Stellen von Fragen, das Sammeln und Austauschen von Daten sowie das Generieren von Dokumenten.
+
+### Start- und Endblock
+
+Jede Anwendung beginnt mit einem Startblock, der durch ein Raketen-Icon gekennzeichnet ist. Von hier aus entfaltet sich der Entscheidungsbaum deiner Anwendung.
+
+Ändere 
+
+Deine Anwendung endet mit einem oder mehreren Endblöcken. Diese verhindern, dass in der fertigen Anwendung ein *zum nächsten Schritt*-Button erscheint. Endblöcke werden im Blockmenü festgelegt.
+
+### Block-Konfiguration und Verzweigung
+
+Jeder Block hat einen zugehörigen Editor, der geöffnet wird, indem du auf den Block klickst. Hier kannst du spezifische Einstellungen für den Block vornehmen und seine [Verbindungen](https://miotodocs.netlify.app/docs/verbindungen "Verbindungen") definieren.
+
+Jeder Block kann sich verzweigen, das heißt, er kann mehr als eine Ausgangsverbindung haben. Dies ermöglicht die Erstellung eines Entscheidungsbaums in deiner Anwendung.
+
+### Blocktypen
+
+#### Eingabe
 
 Diese Blöcke fragen Daten ab. Die Eingaben können den Verlauf deiner Anwendung steuern und als Variablen wiederverwendet und gespeichert werden. Folgendes sind mögliche Eingabetypen:
 
- * **Einfachauswahl:** Ermöglicht die Auswahl einer Antwort aus mehreren vordefinierten Antworten.
- * **Mehrfachauswahl:** Ermöglicht die Auswahl einer Antwort aus mehreren vordefinierten Antworten.
-    * Aufgrund der komplexen Logik dahinter, können Mehrfachauswahl-Eingaben derzeit nur im Dokumenten-Template verwendet werden. Sie können im Builder nicht als Variable eingebunden werden oder die Verbindung determinieren.
- * **Texteingabe:** Eingabe einer Textzeile.
- * **Textfeld:** Eingabe mehrerer Textzeilen.
- * **Nummerneingabe:** Eingabe einer Zahl aus einem vordefinierten Zahlenbereich.
+* **Einfachauswahl:** Ermöglicht die Auswahl einer Antwort aus mehreren vordefinierten Antworten.
+* **Mehrfachauswahl:** Ermöglicht die Auswahl einer Antwort aus mehreren vordefinierten Antworten.
+  * Aufgrund der komplexen Logik dahinter, können Mehrfachauswahl-Eingaben derzeit nur im Dokumenten-Template verwendet werden. Sie können im Builder nicht als Variable eingebunden werden oder die Verbindung determinieren.
+* **Texteingabe:** Eingabe einer Textzeile.
+* **Textfeld:** Eingabe mehrerer Textzeilen.
+* **Nummerneingabe:** Eingabe einer Zahl aus einem vordefinierten Zahlenbereich.
 
-### Information
+#### **Information**
 
 Informationsblöcke stellen relevante Informationen zur Verfügung.
 
-### Dokument
+#### **Dokument**
 
 Diese Blöcke generieren ein Dokument basierend auf vorherigen Eingaben generiert.
 
 [-> Zu den dynamischen Dokumenten](/docs/dokumente "Dokumente")
 
-### Report
+#### **Report**
 
 Reportblöcke versenden E-Mails mit einer Nachricht, einem Dokument-Anhang und/oder dem Entscheidungspfad an eine festgelegte Adresse.
 
-### Berechnung
+#### **Berechnung**
 
 In Berechnungsblöcken können Zahlen und Variablen durch Grundrechenarten zu einer neuen Variable kombiniert werden.
 
-### Logik
+#### **Logik**
 
 Logikblöcke ermöglichen es, die Anwendung in Abhängigkeit von bestimmten Bedingungen zu verzweigen.
