@@ -3,28 +3,31 @@ title: Verbindungen
 description: So funktionieren Verbindungen und ihre Bedingungen
 ---
 
-Mit Mioto kannst du mit interaktiven Entscheidungsbäume deine Arbeitsprozesse automatisieren und strukturieren. Die logische Struktur deines Baums wird durch Blöcke und Verbindungen repräsentiert, und hier erfährst du, wie du diese verwenden kannst.
+Mit Mioto kannst du mit interaktiven Entscheidungsbäume deine Arbeitsprozesse automatisieren und strukturieren. Die Entscheidungsstruktur deines Baumes wird durch Blöcke und Verbindungen repräsentiert, und hier erfährst du, wie du diese verwenden kannst.
 
-### Blöcke und Editoren
+### **Verbindungen erstellen**
 
-* Blöcke: Jeder Block in Mioto repräsentiert einen Schritt in deinem Prozess und hat einen zugehörigen Editor.
-* Editor öffnen: Klicke auf den Block, um spezifische Einstellungen vorzunehmen.
-* Verbindungen: Im Editor kannst du neben dem Inhalt des Blocks auch seine Verbindungen festlegen.
+Du kannst Verbindungen auf zwei Arten erstellen:
 
-### Verbindungen
+* **Canvas:** Klicke auf den Port eines Blocks. Nun kannst du eine Verbindung ziehen. Ziehe die Verbindung entweder auf einen anderen Block und lasse sie dort los, oder lasse sie auf dem leeren Canvas los, um einen neuen Block zu erstellen.
+* **Editor: **Gehe ins *Verbindungstab *des Editors und füge eine Verbindung hinzu. Nun musst du das Verbindungsziel auswählen. Das Verbindungsziel kann ein bestehender Block sein, aber auch ein neuer, der bei Eingabe erstellt wird.
 
-Füge auf dem Canvas oder im Verbindungs-Editor eine oder mehrere Verbindungen hinzu.
+### **Bedingungen festlegen**
 
-Im  Verbindungs-Editor kannst du Bedingungen für Verbindungen festlegen. Zum Beispiel: Wenn ein\:e Nutzer\:in die Frage des Blocks mit "Ja" beantwortet hat, gehe zu Block X.
+Ist eine Verbindung erstellst, kannst du sie im Verbindungstab des Blocks bearbeiten. Klickst du auf eine Verbindung kannst du Bedingungen für sie festlegen. Zum Beispiel: Wenn ein\:e Nutzer\:in die **Frage** des **Blocks** mit "Ja" beantwortet hat, gehe zu **Block X**.
 
-Die Bedingungen der Verbindungen werden in der Reihenfolge geprüft, wie sie im Verbindungs-Editor stehen. Liegt die Bedingung einer Verbindung vor, wird dieser Block angesteuert. Alle weiteren Verbindungen und ihre Bedingungen werden ignoriert.
-
-Du kannst eine Verbindung als Standardverbindung festlegen. Dies kann sinnvoll sein, wenn der Block nur eine Verbindung hat (immer zu einem Block führen soll). Auch bei komplexeren Bedingungen kann es sinnvoll sein, eine Standardverbindung festzulegen. Diese wird dann angesteuert, wenn keine andere der komplexen Bedingungen einschlägig ist. Die Standardverbindung fungiert hier als else-Bedingung ("wenn nichts anderes einschlägig ist").
-
-### Komplexe Bedingungen
+#### **Komplexe Bedingungen**
 
 Bedingungen können mit *und* sowie *oder* verkettet werden.
 
 Mit *und* müssen alle verknüpften Bedingungen erfüllt sein, damit der Verbindung gefolgt wird; Mit *oder* muss mindestens eine Bedingung erfüllt sein.
 
 ![Verzweige deine Anwendung, indem du deinen Verbindungen Bedingungslogiken gibst](/img/Verzweigung.png "Bedingungslogik")
+
+#### **Reihenfolge der Bedingungen**
+
+Die Bedingungen der Verbindungen werden in der Reihenfolge geprüft, wie sie im Verbindungs-Editor stehen (von oben nach unten). Liegt die Bedingung einer Verbindung vor, wird dieser Block angesteuert. Alle weiteren Verbindungen und ihre Bedingungen werden ignoriert.
+
+#### **Die Standardverbindung**
+
+Du kannst eine Verbindung als Standardverbindung festlegen. Dies kann sinnvoll sein, wenn der Block nur eine Verbindung hat (immer zu einem Block führen soll). Auch bei komplexeren Bedingungen kann es sinnvoll sein, eine Standardverbindung festzulegen. Diese wird dann angesteuert, wenn keine andere der komplexen Bedingungen einschlägig ist. Die Standardverbindung fungiert hier als else-Bedingung ("wenn nichts anderes einschlägig ist").
