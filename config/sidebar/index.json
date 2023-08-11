@@ -29,11 +29,11 @@
           "_template": "doc"
         },
         {
-          "document": "docs/vorschau.mdx",
+          "document": "docs/theming.mdx",
           "_template": "doc"
         },
         {
-          "document": "docs/theming.mdx",
+          "document": "docs/vorschau.mdx",
           "_template": "doc"
         }
       ],
