@@ -10,11 +10,11 @@ Mit Mioto kannst du mit interaktiven Entscheidungsbäume deine Arbeitsprozesse a
 Du kannst Verbindungen auf zwei Arten erstellen:
 
 * **Canvas:** Klicke auf den Port eines Blocks. Nun kannst du eine Verbindung ziehen. Ziehe die Verbindung entweder auf einen anderen Block und lasse sie dort los, oder lasse sie auf dem leeren Canvas los, um einen neuen Block zu erstellen.
-* **Editor: **Gehe ins *Verbindungstab *des Editors und füge eine Verbindung hinzu. Nun musst du das Verbindungsziel auswählen. Das Verbindungsziel kann ein bestehender Block sein, aber auch ein neuer, der bei Eingabe erstellt wird.
+* \*\*Editor: \*\*Gehe ins \*Verbindungstab \*des Editors und füge eine Verbindung hinzu. Nun musst du das Verbindungsziel auswählen. Das Verbindungsziel kann ein bestehender Block sein, aber auch ein neuer, der bei Eingabe erstellt wird.
 
 ### **Bedingungen festlegen**
 
-Ist eine Verbindung erstellst, kannst du sie im Verbindungstab des Blocks bearbeiten. Klickst du auf eine Verbindung kannst du Bedingungen für sie festlegen. Zum Beispiel: Wenn ein:e Nutzer:in die **Frage** des **Blocks** mit "Ja" beantwortet hat, gehe zu **Block X**.
+Ist eine Verbindung erstellst, kannst du sie im Verbindungstab des Blocks bearbeiten. Klickst du auf eine Verbindung kannst du Bedingungen für sie festlegen. Zum Beispiel: Wenn ein\:e Nutzer\:in die **Frage** des **Blocks** mit "Ja" beantwortet hat, gehe zu **Block X**.
 
 **Merke:** Erst durch die Festlegung von Bedingungen kann sich dein Entscheidungsbaum verzweigen. Ohne Bedingungen weiß die Anwendung nicht, welcher Schritt des Formulars als nächstes folgt.
 
@@ -25,7 +25,7 @@ Komplexe Bedingungen bestehen aus mehreren Bedingungssätzen, die miteinander ve
 * Und
 * Oder
 
-Habe ich zwei Bedingungssätze mit *UND *verkettet, müssen beide zutreffen. Habe ich zwei Bedingungssätze mit *ODER *verkettet, muss nur einer der beiden zutreffen.
+Habe ich zwei Bedingungssätze mit \*UND \*verkettet, müssen beide zutreffen. Habe ich zwei Bedingungssätze mit \*ODER \*verkettet, muss nur einer der beiden zutreffen.
 
 ![Verzweige deine Anwendung, indem du deinen Verbindungen Bedingungslogiken gibst](/img/Verzweigung.png "Bedingungslogik")
 
@@ -33,6 +33,10 @@ Habe ich zwei Bedingungssätze mit *UND *verkettet, müssen beide zutreffen. Hab
 
 Die Reihenfolge der Verbindungen im Verbindungstab bestimmt, in welcher Reihenfolge die Verbindungen geprüft werden. Es wird also von oben nach unten geprüft. Trifft die Bedingung einer Verbindung zu, wird diese verbindung aktiviert. Alle weiteren Verbindungen und ihre Bedingungen werden ignoriert.
 
-#### **Die Standardverbindung**
+#### **Die Direktverbindung**
 
-Du kannst eine Verbindung als Standardverbindung festlegen. Dies kann sinnvoll sein, wenn der Block nur eine Verbindung hat (immer zu einem Block führen soll). Auch bei komplexeren Bedingungen kann es sinnvoll sein, eine Standardverbindung festzulegen. Diese wird dann angesteuert, wenn keine andere der komplexen Bedingungen einschlägig ist. Die Standardverbindung fungiert hier als else-Bedingung ("wenn nichts anderes einschlägig ist").
+Die Direktverbindung ist eine einfache, automatische Verbindung zwischen zwei Blöcken, die immer dann genutzt wird, wenn es keine alternative Route gibt. Wenn ein Block nur eine einzige Ausgangsverbindung hat, wird diese automatisch als Direktverbindung festgelegt. Sie erfordert keine speziellen Bedingungen oder Regeln, um aktiviert zu werden, da es keine anderen Möglichkeiten gibt. Sollte jedoch eine zweite Verbindung zu diesem Block hinzugefügt werden, wird die Direktverbindung zu einer normalen Verbindung umgewandelt. In diesem Fall müssen Bedingungen festgelegt werden, die bestimmen, wann jede der Verbindungen genutzt wird. Diese Umwandlung stellt sicher, dass der Fluss der Verbindungen logisch bleibt und den festgelegten Regeln entspricht.
+
+#### **Die Rückfallverbindung**
+
+Die Rückfallverbindung dient als Sicherheitsnetz in einem Netzwerk von Verbindungen zwischen den Blöcken. Wenn mehrere Verbindungen vorhanden sind, die jeweils eigene Bedingungen haben, kann es vorkommen, dass keine der Bedingungen erfüllt ist. In diesem Fall greift die Rückfallverbindung ein und wird automatisch aktiviert, um sicherzustellen, dass der Prozess fortgesetzt wird. Es kann nur eine Rückfallverbindung pro Block geben, und sie wird immer am Ende der Verbindungsliste angezeigt. Anders als die anderen Verbindungen kann ihre Reihenfolge in der Liste nicht geändert werden, da sie immer als letzte Option fungiert. Die Rückfallverbindung stellt sicher, dass es immer einen klaren Weg durch den Entscheidungsbaum gibt, selbst wenn unerwartete Situationen auftreten, die nicht durch die anderen Verbindungen abgedeckt sind.
