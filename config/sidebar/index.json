@@ -16,6 +16,10 @@
       "docLink": "docs/builder.mdx",
       "items": [
         {
+          "document": "docs/Eingaben.mdx",
+          "_template": "doc"
+        },
+        {
           "document": "docs/bloecke.mdx",
           "label": "Blöcke",
           "_template": "doc"
