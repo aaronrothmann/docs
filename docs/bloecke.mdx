@@ -9,18 +9,40 @@ Blöcke sind die elementaren Bausteine deiner Anwendung. Jeder Block repräsenti
 
 Die grundlegenden Aktionen von Blöcken umfassen das Stellen von Fragen, das Sammeln und Austauschen von Daten sowie das Generieren von Dokumenten.
 
-## Block-Editor
-
-Jeder Block hat einen zugehörigen Editor, der geöffnet wird, indem du auf den Block klickst. Hier kannst du spezifische Einstellungen für den Block vornehmen und seine [Verbindungen](https://miotodocs.netlify.app/docs/verbindungen "Verbindungen") definieren.
-
-Jeder Block kann sich verzweigen, das heißt, er kann mehr als eine Ausgangsverbindung haben. Dies ermöglicht die Erstellung einer Entscheidungsstruktur in deiner Anwendung.
-
 ## Blöcke erstellen
 
 Die augenscheinlichste Möglichkeit einen Block zu erstellen ist es, auf den Plus-Button in der linken Seitenleiste zu klicken. Anschließend musst du einen Blocktypen auswählen. \
 Existiert bereits ein Block kannst du aber auch an dessen Verbindungskreis ziehen und die Verbindung auf dem leeren Canvas loslassen. Dann erscheint ebenfalls die Auswahl eines Blocktypen. Ist der Blocktyp ausgewählt, wird der Block an entsprechender Stelle eingesetzt. Der Vorteil hieran ist, dass die beiden Blöcke direkt miteinander verbunden sind.
 
-## Start- und Endblock
+## Blöcke auf dem Canvas
+
+Auf dem Canvas werden Blöcke als Karten dargestellt. Folgendes stellen die Blöcke dar:
+
+* Start- und Endeigenschaft, sofern es sich, um einen Start- oder Endblock handelt (Kopfzeile der Blockkarte)
+* Blocktyp (Kopfzeile der Blockkarte)
+* Blockname (In der Mitte der Blockkarte)
+
+Blöcke haben einen Verbindungskreis aus dem per drag-and-drop Verbindungen gezogen werden können. Daraus führen die Verbindungen eines Blocks zu den verbundenen Blöcken.
+
+Klickst du auf eine Blockkarte auf dem Canvas, öffnet sich ihr Block-Editor als rechte Seitenleiste.
+
+## Block-Editor
+
+Jeder Block hat einen zugehörigen Editor, der geöffnet wird, indem du auf den Block klickst. Hier kannst du spezifische Einstellungen für den Block vornehmen und seine [Verbindungen](https://miotodocs.netlify.app/docs/verbindungen "Verbindungen") definieren.
+
+### Kopfzeile
+
+In der Kopfzeile des Block-Editors befindet sich ein Button zur Änderung des Blocktypen, die Eingabe des Blocknamen, das Blockmenü, sowie eine Tab-Leiste in der man folgende Möglichkeiten hat:
+
+* Ansicht des Blockinhalts
+* Ansicht der Verbindungen
+* Bei formularseitigen Blöcken: Ansicht der Formular-Vorschau
+
+#### Block-Menü
+
+Das Block-Menü öffnet sich beim Klicken auf das Dreipunkt-Icon in der Kopfzeile des Block-Editors. Dort hast du folgende Möglichkeiten:
+
+##### Start- und Endblock festlegen
 
 Zur Erstellung eines funktionierenden Formulars, muss ein Startblock festgelegt werden und mindestens ein Endblock.
 
@@ -28,9 +50,17 @@ Der Startblock wird durch ein Raketen-Icon gekennzeichnet. Von hier aus entfalte
 
 Dein Formular endet mit einem oder mehreren Endblöcken. Diese verhindern, dass in der fertigen Anwendung ein *zum nächsten Schritt*-Button erscheint.
 
-Start- und Endblöcke werden im Blockmenü festgelegt, dem Dreipunkt-Menü des Block-Editors, festgelegt.
+Start- und Endblöcke werden im Blockmenü festgelegt des Block-Editors, festgelegt.
 
 ![Klicke auf das Block-Menü mit dem Dreipunkt-Icon, um Start- und Endblöcke festzulegen](/img/Start_und_Ende.png "Start und Ende deiner Anwendung")
+
+##### Block duplizieren
+
+Dupliziert den Block mitsamt Inhalt, aber ohne dessen Verbindungen.
+
+##### Block löschen
+
+Löscht den Block mitsamt Verbindungen bei Bestätigung des Dialogs.
 
 ## Blocktypen und ihre Funktionen
 
