@@ -16,12 +16,12 @@
       "docLink": "docs/builder.mdx",
       "items": [
         {
-          "document": "docs/Eingaben.mdx",
+          "document": "docs/bloecke.mdx",
+          "label": "Blöcke",
           "_template": "doc"
         },
         {
-          "document": "docs/bloecke.mdx",
-          "label": "Blöcke",
+          "document": "docs/Eingaben.mdx",
           "_template": "doc"
         },
         {
