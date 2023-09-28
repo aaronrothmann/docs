@@ -17,17 +17,14 @@
       "items": [
         {
           "title": "Blöcke",
-          "link": "doc",
-          "docLink": "docs/bloecke.mdx",
+          "link": "generated",
           "_template": "category"
         },
         {
-          "_template": "doc"
-        },
-        {
-          "document": "docs/bloecke.mdx",
-          "label": "Blöcke",
-          "_template": "doc"
+          "title": "Blöcke",
+          "link": "doc",
+          "docLink": "docs/bloecke.mdx",
+          "_template": "category"
         },
         {
           "document": "docs/Eingaben.mdx",
