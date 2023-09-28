@@ -23,6 +23,22 @@
             {
               "document": "docs/Eingaben.mdx",
               "_template": "doc"
+            },
+            {
+              "document": "docs/Blocktyp-Berechnung.mdx",
+              "_template": "doc"
+            },
+            {
+              "_template": "doc"
+            },
+            {
+              "_template": "doc"
+            },
+            {
+              "_template": "doc"
+            },
+            {
+              "_template": "doc"
             }
           ],
           "_template": "category"
