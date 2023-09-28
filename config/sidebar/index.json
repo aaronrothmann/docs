@@ -16,6 +16,10 @@
       "docLink": "docs/Grundkonzepte.mdx",
       "items": [
         {
+          "document": "docs/builder.mdx",
+          "_template": "doc"
+        },
+        {
           "title": "Blöcke",
           "link": "doc",
           "docLink": "docs/bloecke.mdx",
