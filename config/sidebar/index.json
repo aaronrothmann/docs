@@ -17,7 +17,14 @@
       "items": [
         {
           "title": "Blöcke",
-          "link": "generated",
+          "link": "doc",
+          "docLink": "docs/bloecke.mdx",
+          "items": [
+            {
+              "document": "docs/Eingaben.mdx",
+              "_template": "doc"
+            }
+          ],
           "_template": "category"
         },
         {
