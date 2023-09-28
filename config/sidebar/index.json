@@ -43,6 +43,10 @@
             {
               "document": "docs/Blocktyp-Logik.mdx",
               "_template": "doc"
+            },
+            {
+              "document": "docs/Blocktyp-Information.mdx",
+              "_template": "doc"
             }
           ],
           "_template": "category"
