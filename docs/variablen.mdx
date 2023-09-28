@@ -5,38 +5,41 @@ description: Frühere Eingaben als Variablen referenzieren.
 
 ### Was sind Variablen?
 
-Variablen sind Platzhalter für dynamische Werte, die während der Nutzung eines Formulars generiert werden. Genauer gesagt entstehen stehen diese Variablen für die verschiedenen Eingaben des/der Nutzer/in.
-
-Diese dynamischen Werte erlauben es, maßgeschneiderte Texte und Dokumente basierend auf den individuellen Eingaben der Nutzer/innen zu erstellen.
+Variablen sind spezielle Platzhalter für Werte, die dynamisch während der Nutzung eines Formulars generiert werden. Sie stehen für die unterschiedlichen Eingaben der Nutzer/innen und erlauben die Erstellung von individuell zugeschnittenen Texten, Dokumenten und Aktionen.
 
 ### Woher kommen Variablen?
 
-Jede Nutzer/inneneingabe in Eingabe-Blöcken erzeugt eine Variable. Berechnungs-Blöcke und Textblöcke das Ergebnis erzeugen ihre Berechnung bzw. ihren Textinhalt als Variable. Des Weiteren erzeugt jeder Block seine eigene Statusvariable, mit der etwas nachgeprüft werden kann, ob er im Entscheidungsverlauf des Formulars aktiviert wurde.
+Variablen werden in verschiedenen Kontexten erzeugt:
+
+* Eingabe-Blöcke: Jede Nutzereingabe in einem Eingabe-Block erzeugt eine neue Variable.
+* Berechnungs-Blöcke: Das Ergebnis des Berechnungsblocks wird als Variable gespeichert.
+* Textblöcke: Der Textinhalt des Textblocks wird als Variable erzeugt.
+* Block-Status: Jeder Block erzeugt eine Statusvariable, die verfolgt, ob der Block im Entscheidungsbaum aktiviert wurde oder nicht.
 
 ### Variablentypen
 
-Es gibt verschiedene Variablentypen. Dies ist entscheidend für die Bedingungen, da die Erstellung des Bedingungssatzes von der Art der Variable abhängt. Folgende Typen gibt es:
+Es gibt verschiedene Arten von Variablen, und die Art der Variable beeinflusst, wie sie in Bedingungssätzen verwendet werden kann:
 
-* Einfachauswahl: Diese Variable wird durch die Eingabe "Einfachauswahl" produziert.
-* Mehrfachauswahl: Diese Variable wird durch eine Eingabe "Mehrfachauswahl" produziert.
-* Text: Diese Variable wird durch die Eingaben "Texteingabe", oder "Textfeld" produziert.
-* Zahl: Diese Variable wird durch die Eingabe "Zahleneingabe" produziert.
-* Block-Status: Diese Variable wird durch den Status eines Blocks produziert.
+* Einfachauswahl: Erzeugt durch die "Einfachauswahl"-Eingabe.
+* Mehrfachauswahl: Erzeugt durch die "Mehrfachauswahl"-Eingabe.
+* Text: Erzeugt durch "Texteingabe" oder "Textfeld"-Eingabe.
+* Zahl: Erzeugt durch "Zahleneingabe".
+* Block-Status: Erzeugt durch den Status eines Blocks.
 
-Jeder Variablentyp hat ein eigenes Icon, das an der Variable angezeigt wird. Die Variable des Blocks, also der Blockstatus, behält das Icon des Blocktyps.
+Icon-Hinweis: Jeder Variablentyp hat ein eigenes Icon, das neben der Variable angezeigt wird. Blockstatus-Variablen behalten das Icon des jeweiligen Blocktyps.
 
 ### Einsatz von Variablen in deiner Anwendung
 
-#### Integration von Variablen in Dokumente
+#### Integration in Dokumente
 
-Wie Variablen in Dokumenten eingebunden werden, erfährst du hier: [Dynamische Dokumente](/docs/dokumente "Dynamische Dokumente")
+Für Informationen zur Einbindung von Variablen in Dokumente siehe: [Dynamische Dokumente](https://chat.openai.com/c/4a280fd0-bee9-4c65-8ad9-b2a3870a836d#).
 
-#### Integration von Variablen in den Texteditor
+#### Integration in den Texteditor
 
-Variablen können in den Texteditor von Informations-, Report- und Eingabe-Blöcken eingebunden werden.
+Variablen können leicht in den Texteditor von Informations-, Report- und Eingabe-Blöcken integriert werden. Hier ist, wie es geht:
 
-Wähle das @-Symbol auf deiner Tastatur, um eine Dropdown-Liste mit verfügbaren Variablen zu öffnen.
-
-Wähle die gewünschte Variable aus der Liste aus und sie wird in deinen Text integriert.
+* Drücke das @-Symbol auf deiner Tastatur.
+* Eine Dropdown-Liste mit allen verfügbaren Variablen wird angezeigt.
+* Wähle die gewünschte Variable aus, und sie wird nahtlos in deinen Text eingefügt.
 
 ![](/img/Variablen.png "Setze mit @ Variablen in deinen Text-Editor ein")
