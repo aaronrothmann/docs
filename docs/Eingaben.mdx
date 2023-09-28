@@ -2,55 +2,45 @@
 title: 'Blocktyp: Eingabe'
 ---
 
-Der Blocktyp "Eingabe" gehört zu der Kategorie "Daten", da er Variablen (wiederverwendbare Werte) produziert.
+### Einführung
 
-Eingabeblöcke sind formularseitige Blöcke. Im Builder kann man in ihnen Eingaben erstellen. Die Eingaben sind dafür da im Formular Daten von dem/der Endnutzer\:in abzufragen.
+Blocktyp "Eingabe" fällt in die Kategorie "Daten", da er mit Variablen arbeitet. Diese Variablen sind Schlüsselelemente in deinem Mioto Builder und dienen dazu, Informationen vom Endnutzer zu erfassen.
 
-Jede Eingabe produziert eine Variable - einen unbekannten Wert. Dieser Wert kann in Bedingungen eingesetzt werden und dadurch den Verlauf deiner Anwendung steuern. Außerdem kann der Wert als Variable im Formular oder in deinen dynamischen Dokumenten eingesetzt werden. Aber bevor wir dazu kommen, erst einmal zu den Basics.
+### Warum sind Variablen wichtig?
 
-### Eingabetypen
+Jede Eingabe generiert eine Variable, ein flexibles Element, das du in Bedingungen einsetzen kannst. Auf diese Weise steuerst du den Verlauf deiner Anwendung. Aber das ist noch nicht alles: Diese Variablen kannst du auch in deinen Formularen oder in dynamischen Dokumenten verwenden.
 
-Dies sind die verschiedenen Eingabetypen, die du in einem Eingabeblock erstellen kannst.
+### Arten von Eingaben
 
-* **Einfachauswahl:** Ermöglicht die Auswahl einer Antwort aus mehreren vordefinierten Antworten.
-* **Mehrfachauswahl:** Ermöglicht die Auswahl einer Antwort aus mehreren vordefinierten Antworten.
-  * Aufgrund der komplexen Logik dahinter, können Mehrfachauswahl-Eingaben derzeit nur im Dokumenten-Template verwendet werden. Sie können im Builder nicht als Variable eingebunden werden oder die Verbindung determinieren.
-* **Texteingabe:** Eingabe einer Textzeile.
-* **Textfeld:** Eingabe mehrerer Textzeilen.
-* **Nummerneingabe:** Eingabe einer Zahl aus einem vordefinierten Zahlenbereich.
+* Einfachauswahl: Der Endnutzer wählt eine Option aus vordefinierten Antworten.
+* Mehrfachauswahl: Der Endnutzer kann mehrere Antworten wählen.
+* Texteingabe: Ermöglicht das Eingeben einer einzelnen Textzeile.
+* Textfeld: Für mehrzeilige Texteingaben.
+* Nummerneingabe: Ermöglicht das Eingeben einer Zahl aus einem vordefinierten Bereich.
 
 ### Eingaben hinzufügen
 
-Klicke im Block-Editor auf den Button "Eingabe hinzufügen". Anschließend kannst du aus allen Eingabetypen wählen.
+1. Klicke im Block-Editor auf "Eingabe hinzufügen".
+2. Wähle den Eingabetyp, der am besten zu deinem Bedarf passt.
 
-### Inhalt der Eingaben
+### Eingabeoptionen
 
-Eingaben werden im Block-Editor als Karten dargestellt. Die Eingabekarten haben verschiedene Bearbeitungsmöglichkeiten.
+Eingaben werden als Karten dargestellt, mit verschiedenen Möglichkeiten zur Anpassung.
 
-#### Eingabemenü
+* Dreipunkt-Menü: Hier kannst du die Word-Variable kopieren, den Eingabetyp ändern oder die Eingabe löschen.
+* Eingabename: Definiert, wie die Eingabe im Dropdown-Menü für Variablen erscheint.
+* Eingabelabel: Das ist der Text, der im Formular über der Eingabe steht. Du kannst ihn auch deaktivieren.
+* Pflichtfeld: Du kannst festlegen, ob die Eingabe erforderlich ist oder nicht.
 
-Jede Eingabekarte hat ein Dreipunkt-Menü. In diesem Menü kann:
+### Spezielle Optionen für Auswahleingaben
 
-* Die Word-Variable zur Erstellung dynamischer Dokumente herauskopiert werden.
-* Der Eingabetyp geändert werden.
-* Die Eingabe gelöscht werden.
+Für die Eingabetypen "Einfachauswahl" und "Mehrfachauswahl":
 
-#### Eingabename
+1. Klicke auf "Antwort hinzufügen".
+2. Gib die Antwortoptionen ein.
+3. Nutze das Handle-Icon, um die Reihenfolge der Antworten zu sortieren.
 
-Der Eingabename legt fest, wie die Eingabe referenziert wird. Bei der Variablenauswahl werden Blöcke mit ihren Eingaben in einem Dropdown dargestellt. Eingaben werden dort anhand ihres Namens identifizierbar.
+### Reihenfolge der Eingaben anpassen
 
-#### Eingabelabel
-
-Lege das Label fest, das im Formular über der Eingabe stehen soll. Standardmäßig ist das Label aktiviert - du kannst es aber auch deaktivieren. Hat ein aktives Label keinen Inhalt, übernimmt es den Inhalt aus dem Eingabenamen.
-
-#### Pflichtfeld
-
-Standardmäßig ist eine Eingabe als Pflichtfeld markiert. In der Eingabekarte kannst du festlegen, ob die Eingabe ein Pflichtfeld sein soll, oder nicht.
-
-#### Nur bei Ein- und Mehrfachauswahl: Antwortoptionen definieren
-
-Beim Eingabetyp "Einfachauswahl" und "Mehrfachauswahl" kannst du in der Eingabekarte die Antwortauswahl hinzufügen. Klicke dafür auf "Antwort hinzufügen" und definiere die mögliche Antwort. Mit dem Handle-Icon kannst du die Reihenfolge der Antworten festlegen.
-
-#### Reihenfolge der Eingaben ändern
-
-Klicke auf den kleinen Button "Reihenfolge ändern" links neben dem Button "Eingabe hinzufügen". Anschließend schließen sich die Eingabekarten und du kannst sie per drag-and-drop an die gewünschte Stelle verschieben.
+1. Klicke auf "Reihenfolge ändern".
+2. Nutze Drag-and-Drop, um die Eingabekarten an ihre neue Position zu bewegen.
