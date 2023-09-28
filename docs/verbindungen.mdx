@@ -61,12 +61,12 @@ Habe ich zwei Bedingungssätze mit \*UND \*verkettet, müssen beide zutreffen. H
 
 #### **Reihenfolge der Bedingungen**
 
-Die Reihenfolge der Verbindungen im Verbindungstab bestimmt, in welcher Reihenfolge die Verbindungen geprüft werden. Es wird also von oben nach unten geprüft. Trifft die Bedingung einer Verbindung zu, wird diese verbindung aktiviert. Alle weiteren Verbindungen und ihre Bedingungen werden ignoriert.
+Die Reihenfolge der Verbindungen im Verbindungstab bestimmt, in welcher Reihenfolge die Verbindungen geprüft werden. Es wird also von oben nach unten geprüft. Trifft die Bedingung einer Verbindung zu, wird diese Verbindung aktiviert. Alle weiteren Verbindungen und ihre Bedingungen werden ignoriert.
 
 #### **Die Direktverbindung**
 
-Die Direktverbindung ist eine einfache, automatische Verbindung zwischen zwei Blöcken, die immer dann genutzt wird, wenn es keine alternative Route gibt. Wenn ein Block nur eine einzige Ausgangsverbindung hat, wird diese automatisch als Direktverbindung festgelegt. Sie erfordert keine speziellen Bedingungen oder Regeln, um aktiviert zu werden, da es keine anderen Möglichkeiten gibt. Sollte jedoch eine zweite Verbindung zu diesem Block hinzugefügt werden, wird die Direktverbindung zu einer normalen Verbindung umgewandelt. In diesem Fall müssen Bedingungen festgelegt werden, die bestimmen, wann jede der Verbindungen genutzt wird. Diese Umwandlung stellt sicher, dass der Fluss der Verbindungen logisch bleibt und den festgelegten Regeln entspricht.
+Wenn ein Block nur eine Ausgangsverbindung hat, ist das automatisch deine Direktverbindung. Keine Regeln, keine Bedingungen – der Fluss geht einfach weiter. Fügst du eine zweite Verbindung hinzu, wird's komplexer. Dann musst du Bedingungen für beide festlegen.
 
 #### **Die Rückfallverbindung**
 
-Die Rückfallverbindung dient als Sicherheitsnetz in einem Netzwerk von Verbindungen zwischen den Blöcken. Wenn mehrere Verbindungen vorhanden sind, die jeweils eigene Bedingungen haben, kann es vorkommen, dass keine der Bedingungen erfüllt ist. In diesem Fall greift die Rückfallverbindung ein und wird automatisch aktiviert, um sicherzustellen, dass der Prozess fortgesetzt wird. Es kann nur eine Rückfallverbindung pro Block geben, und sie wird immer am Ende der Verbindungsliste angezeigt. Anders als die anderen Verbindungen kann ihre Reihenfolge in der Liste nicht geändert werden, da sie immer als letzte Option fungiert. Die Rückfallverbindung stellt sicher, dass es immer einen klaren Weg durch den Entscheidungsbaum gibt, selbst wenn unerwartete Situationen auftreten, die nicht durch die anderen Verbindungen abgedeckt sind.
+Sie ist dein Netz für den Fall, dass alle anderen Verbindungen scheitern. Hast du mehrere Verbindungen mit Bedingungen, und keine passt? Die Rückfallverbindung wird aktiviert. Sie steht immer am Ende der Liste und kann nicht verschoben werden. Sie sorgt dafür, dass der Prozess immer läuft, egal was passiert.
