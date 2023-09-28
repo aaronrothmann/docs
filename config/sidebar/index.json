@@ -16,6 +16,7 @@
       "docLink": "docs/builder.mdx",
       "items": [
         {
+          "document": "docs/Eingaben.mdx",
           "_template": "doc"
         },
         {
@@ -24,7 +25,7 @@
           "_template": "doc"
         },
         {
-          "document": "docs/Eingaben.mdx",
+          "document": "docs/Blocktyp-Berechnung.mdx",
           "_template": "doc"
         },
         {
@@ -37,10 +38,6 @@
         },
         {
           "document": "docs/theming.mdx",
-          "_template": "doc"
-        },
-        {
-          "document": "docs/Blocktyp-Berechnung.mdx",
           "_template": "doc"
         }
       ],
