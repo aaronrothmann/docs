@@ -11,19 +11,12 @@
       "label": "Changelog",
       "link": "blog",
       "position": "left"
-    },
-    {
-      "label": "Aktuelles",
-      "link": "page",
-      "pageLink": "src/pages/aktuelles.mdx",
-      "position": "left"
     }
   ],
   "logo": {
     "alt": "",
-    "src": "/img/icon transp.png"
+    "src": "/img/logo.svg"
   },
-  "title": "Dokumentation",
   "footer": {
     "style": "dark",
     "links": [
