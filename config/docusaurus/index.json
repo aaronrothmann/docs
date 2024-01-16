@@ -2,7 +2,7 @@
   "label": "Settings",
   "navbar": [
     {
-      "label": "Zurück zur Homepage",
+      "label": "Zurück zu Mioto",
       "link": "external",
       "externalLink": "https://mioto.app",
       "position": "right"
