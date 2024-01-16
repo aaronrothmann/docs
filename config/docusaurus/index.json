@@ -2,9 +2,9 @@
   "label": "Settings",
   "navbar": [
     {
-      "label": "Docs",
-      "link": "doc",
-      "docLink": "docs/intro.mdx",
+      "label": "Zurück zur Homepage",
+      "link": "external",
+      "externalLink": "https://mioto.app",
       "position": "left"
     }
   ],
@@ -65,5 +65,5 @@
   },
   "url": "https://miotodocs.netlify.app",
   "tagline": "Das digitale Geschäftsmodell für Kanzleien.",
-  "title": "zurück zur Home "
+  "title": "Mioto"
 }
